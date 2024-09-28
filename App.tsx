@@ -1,28 +1,44 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+import React, { useState } from 'react';
+import styles from './styles';
 
-import React from 'react';
 import {
+  Button,
   SafeAreaView,
   Text,
-  View,
-  Button,
-  Alert
+  View
 } from 'react-native';
 
+import {
+  CustomButton,
+  CustomPressableButton,
+  CustomTouchableHighlightButton,
+  CustomTouchableOpacityButton
+} from './customComponents';
+
 const App = () => {
+
+  let [title, setTitle] = useState("Press here")
+
   return (
-    <SafeAreaView>
-      <View>
-        <Text> Hello React Native User! </Text>
-        <Button title='Click Here' onPress={() => {
-          Alert.alert('Button Action', 'Clicked on the button');
-        }
-        } />
+    <SafeAreaView style={styles.container}>
+      <View style={styles.innerContainer}>
+
+        <Text style={styles.welcomeText}>Hello React Native User!</Text>
+
+        <CustomButton title={title} setTitle={setTitle} onPress={undefined} />
+
+        <CustomPressableButton title={title} setTitle={setTitle} onPress={undefined} />
+
+        <CustomTouchableOpacityButton title={title} setTitle={setTitle} onPress={undefined} />
+
+        <CustomTouchableHighlightButton title={title} setTitle={setTitle} onPress={undefined} />
+
+        <View style={styles.button}>
+          <Button title='Reset' onPress={() => {
+            setTitle('Press here');
+          }} color={"white"} />
+        </View>
+
       </View>
     </SafeAreaView>
   );
