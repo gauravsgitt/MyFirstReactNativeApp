@@ -7,7 +7,6 @@ import {
     TouchableHighlight,
     Pressable,
     Text,
-    StyleSheet,
     Alert
 } from 'react-native';
 

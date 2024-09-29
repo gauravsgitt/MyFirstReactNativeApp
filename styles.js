@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
     },
     innerContainer: {
         flex: 1,
-        alignItems: 'center',
+        padding: 20,
         justifyContent: 'center'
     },
     welcomeText: {
@@ -30,6 +30,22 @@ const styles = StyleSheet.create({
         color: 'white',
         fontSize: 16,
         textAlign: 'center'
+    },
+    textField: {
+        fontSize: 20,
+        borderWidth: 1,
+        borderColor: 'black',
+        padding: 10,
+        marginBottom: 10,
+        borderRadius: 10
+    },
+    passwordTextField: {
+        fontSize: 20,
+        borderWidth: 1,
+        borderColor: 'black',
+        padding: 10,
+        backgroundColor: 'plum',
+        marginBottom: 10
     }
 });
 
